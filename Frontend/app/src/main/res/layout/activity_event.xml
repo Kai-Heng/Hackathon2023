@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="20dp"
+    android:background="@color/Ezra_pinkmid"
+    tools:context=".EventActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout_eventName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/eventNameTextField"
+            android:text="@string/eventName_label"
+            android:scrollbars="vertical"
+
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/eventNameTextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:textSize="23sp"
+            android:textColor="@color/white"
+            android:textAlignment="textStart"
+            tools:layout_editor_absoluteX="-28dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/eventTimeTextField"
+            android:textColor="@color/white"
+            android:text="@string/eventTime_label"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/eventTimeTextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:textSize="23sp"
+            android:textColor="@color/white"
+            android:textAlignment="textStart"
+            tools:layout_editor_absoluteX="-28dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:labelFor="@id/eventLocationTextField"
+            android:text="@string/eventLocation_label"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/eventLocationTextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:textSize="23sp"
+            android:textColor="@color/white"
+            android:textAlignment="textStart"
+            tools:layout_editor_absoluteX="-28dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/createEventBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_label"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="300dp"/>
+
+    <TextView
+        android:id="@+id/eventList"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="400dp"
+        android:textColor="@color/white"
+        android:text="Event" />
+
+    <Button
+        android:id="@+id/getEventBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/getData_label"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="650dp"/>
+
+    <Button
+        android:id="@+id/eventBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="650dp"/>
+</RelativeLayout>

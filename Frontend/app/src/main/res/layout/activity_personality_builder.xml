@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Ezra_pinklight"
+    tools:context=".PersonalityBuilder">
+
+    <TextView
+        android:id="@+id/personalityBuilderTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Build Your Personality"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        android:textColor="@color/white"
+        android:background="@color/Ezra_pinkmid"/>
+
+    <ScrollView
+        android:id="@+id/personalityBuilder_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/hobbiesTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/accountDetailsLayout"
+                android:text="Hobbies / Interests"
+                app:layout_constraintTop_toTopOf="@+id/hobbiesLayout"
+                android:textSize="27sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/hobbiesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/hobbiesTitle">
+
+                <RelativeLayout
+                    android:id="@+id/hobbiesSelectionLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/sportsHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12sp"
+                        android:text="Sports"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/bikingHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="105dp"
+                        android:background="@color/red_grey"
+                        android:text="Biking"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/gardeningHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="199dp"
+                        android:textSize="12sp"
+                        android:text="Gardening"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/bakingHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="293dp"
+                        android:textSize="12sp"
+                        android:text="Baking"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/archeryHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12sp"
+                        android:text="Archery"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/singingHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="105dp"
+                        android:background="@color/red_grey"
+                        android:text="Singing"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/bloggingHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="199dp"
+                        android:textSize="12sp"
+                        android:text="Blogging"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/bowlingHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="293dp"
+                        android:textSize="12sp"
+                        android:text="Bowling"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/photographyHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12sp"
+                        android:text="Photography"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/cookingHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_marginLeft="105dp"
+                        android:background="@color/red_grey"
+                        android:text="Cooking"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/readingHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_marginLeft="199dp"
+                        android:textSize="12sp"
+                        android:text="Reading"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/travelHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_marginLeft="293dp"
+                        android:textSize="12sp"
+                        android:text="Travel"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/artHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12sp"
+                        android:text="Art"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/potteryHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginLeft="105dp"
+                        android:background="@color/red_grey"
+                        android:text="Pottery"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/hikingHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginLeft="199dp"
+                        android:textSize="12sp"
+                        android:text="Hiking"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/fishingHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginLeft="293dp"
+                        android:textSize="12sp"
+                        android:text="Fishing"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/paintingHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12sp"
+                        android:text="Painting"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/danceHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginLeft="105dp"
+                        android:background="@color/red_grey"
+                        android:text="Dance"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/musicHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginLeft="199dp"
+                        android:textSize="12sp"
+                        android:text="Music"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/woodworkingHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginLeft="293dp"
+                        android:textSize="12sp"
+                        android:text="Woodworking"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/yogaHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="200dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12sp"
+                        android:text="Yoga"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/calligraphyHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="200dp"
+                        android:layout_marginLeft="105dp"
+                        android:background="@color/red_grey"
+                        android:text="Calligraphy"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/chessHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="200dp"
+                        android:layout_marginLeft="199dp"
+                        android:textSize="12sp"
+                        android:text="Chess"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/knittingHobbiesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="200dp"
+                        android:layout_marginLeft="293dp"
+                        android:textSize="12sp"
+                        android:text="Knitting"
+                        android:background="@color/red_grey"/>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/viewSelected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Selected"
+                android:textSize="23sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Demographics"
+                android:textSize="27sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/demographicsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_age"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@id/editprofilewindows_aboutMe"
+                        android:text="Age"
+                        android:textStyle="italic"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/ageEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:textSize="23sp"
+                        android:textColor="@color/black"
+                        android:textAlignment="textStart" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@id/nameEditText"
+                        android:text="Name"
+                        android:textStyle="italic"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/nameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:textSize="23sp"
+                        android:textColor="@color/black"
+                        android:textAlignment="textStart" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_sexuality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@id/sexualityEditText"
+                        android:text="Sexuality"
+                        android:textStyle="italic"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/sexualityEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:textSize="23sp"
+                        android:textColor="@color/black"
+                        android:textAlignment="textStart" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Location"
+                        android:textStyle="italic"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/locationEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:textSize="23sp"
+                        android:textColor="@color/black"
+                        android:textAlignment="textStart" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mobile"
+                        android:labelFor="@+id/mobileEditText"
+                        android:textStyle="italic"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/mobileEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:textSize="23sp"
+                        android:textColor="@color/black"
+                        android:textAlignment="textStart" />
+                </LinearLayout>
+            </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/lifestyleLayout"
+            android:text="Lifestyle"
+            android:textSize="27sp"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:id="@+id/lifestyleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/linearLayout_lifesytle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/activeLifestyleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="12sp"
+                    android:text="Active"
+                    android:background="@color/red_grey"/>
+
+                <Button
+                    android:id="@+id/healthyLifestyleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="105dp"
+                    android:background="@color/red_grey"
+                    android:text="Healthy"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/soloLifestyleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="199dp"
+                    android:textSize="12sp"
+                    android:text="Solo"
+                    android:background="@color/red_grey"/>
+
+                <Button
+                    android:id="@+id/ruralLifestyleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="293dp"
+                    android:textSize="12sp"
+                    android:text="Rural"
+                    android:background="@color/red_grey"/>
+
+                <Button
+                    android:id="@+id/urbanLifestyleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="12sp"
+                    android:text="Urban"
+                    android:background="@color/red_grey"/>
+
+                <Button
+                    android:id="@+id/nomadicLifestyleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="105dp"
+                    android:background="@color/red_grey"
+                    android:text="Nomadic"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/bohemianLifestyleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="199dp"
+                    android:textSize="12sp"
+                    android:text="Bohemian"
+                    android:background="@color/red_grey"/>
+
+                <Button
+                    android:id="@+id/digitalLifestyleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="293dp"
+                    android:textSize="12sp"
+                    android:text="Digital"
+                    android:background="@color/red_grey"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/valuesLayout"
+                android:text="Values"
+                android:textSize="27sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/valuesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/linearLayout_values"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/accountabilityBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12sp"
+                        android:text="Accountability"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/achievementBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="115dp"
+                        android:background="@color/red_grey"
+                        android:text="Achievement"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/adaptabilityBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="209dp"
+                        android:textSize="12sp"
+                        android:text="Adaptability"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/adventureBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="303dp"
+                        android:textSize="12sp"
+                        android:text="Adventure"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/ambitionBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="12sp"
+                        android:text="Ambition"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/careerBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="115dp"
+                        android:background="@color/red_grey"
+                        android:text="Career"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/caringBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="209dp"
+                        android:textSize="12sp"
+                        android:text="Caring"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/communityBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="303dp"
+                        android:textSize="12sp"
+                        android:text="Community"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/friendshipBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="12sp"
+                        android:text="Friendship"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/confidenceBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_marginLeft="115dp"
+                        android:background="@color/red_grey"
+                        android:text="Confidence"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/harmonyBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_marginLeft="209dp"
+                        android:textSize="12sp"
+                        android:text="Harmony"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/graceBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_marginLeft="303dp"
+                        android:textSize="12sp"
+                        android:text="Grace"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/honestyBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="12sp"
+                        android:text="Honesty"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/freedomBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginLeft="115dp"
+                        android:background="@color/red_grey"
+                        android:text="Freedom"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/faithBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginLeft="209dp"
+                        android:textSize="12sp"
+                        android:text="Faith"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/ethicsBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginLeft="303dp"
+                        android:textSize="12sp"
+                        android:text="Ethics"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/patriotismBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="12sp"
+                        android:text="Patriotism"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/knowledgeBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginLeft="115dp"
+                        android:background="@color/red_grey"
+                        android:text="Knowledge"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/leadershipBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginLeft="209dp"
+                        android:textSize="12sp"
+                        android:text="Leadership"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/natureBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginLeft="303dp"
+                        android:textSize="12sp"
+                        android:text="Nature"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/sportsmanshipBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="200dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12sp"
+                        android:text="Sportsmanship"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/respectBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="200dp"
+                        android:layout_marginLeft="115dp"
+                        android:background="@color/red_grey"
+                        android:text="Respect"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/teamworkBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="200dp"
+                        android:layout_marginLeft="209dp"
+                        android:textSize="12sp"
+                        android:text="Teamwork"
+                        android:background="@color/red_grey"/>
+
+                    <Button
+                        android:id="@+id/wealthBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="200dp"
+                        android:layout_marginLeft="303dp"
+                        android:textSize="12sp"
+                        android:text="Wealth"
+                        android:background="@color/red_grey"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/goalsLayout"
+                android:text="Goals"
+                android:textSize="27sp"
+                android:textStyle="bold"/>
+            <LinearLayout
+                android:id="@+id/goalsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/goalEditText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:textSize="23sp"
+                    android:hint="Goal 1"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"
+                    android:textAlignment="textStart"/>
+
+                <EditText
+                    android:id="@+id/goalEditText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:textSize="23sp"
+                    android:hint="Goal 2"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"
+                    android:textAlignment="textStart"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/personalityDoneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/smoothbutton"
+        android:textColor="@color/white"
+        android:text="Done"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="650dp"/>
+
+    <Button
+        android:id="@+id/personalityCheckButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/smoothbutton"
+        android:textColor="@color/white"
+        android:text="Pre-submit"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="650dp"/>
+
+</RelativeLayout>
