@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Ezra_pinklight"
+    tools:context=".SignUpPageActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+        <TextView
+            android:id="@+id/signUpPageTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textAlignment="center"
+            android:text="Sign Up"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:paddingBottom="50dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email Address"
+            android:labelFor="@+id/emailAddrInputText"
+            android:textStyle="italic"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/emailAddrInputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textColor="@color/black"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:labelFor="@+id/newPasswordInputText"
+            android:textStyle="italic"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/newPasswordInputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textColor="@color/black"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:labelFor="@+id/newUsernameInputText"
+            android:textStyle="italic"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/newUsernameInputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textColor="@color/black"
+            android:textAlignment="textStart" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="70dp">
+
+            <Button
+                android:id="@+id/createUserButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/smoothbutton"
+                android:textColor="@color/white"
+                android:text="Create"
+                android:textSize="25sp"/>
+
+            <EditText
+                android:id="@+id/userIdTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:hint="Do not change anything here"
+                android:textStyle="italic"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/doneSignUpButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/smoothbutton"
+                android:textColor="@color/white"
+                android:text="Done"
+                android:textSize="25sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
