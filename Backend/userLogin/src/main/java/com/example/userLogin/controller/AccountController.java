@@ -2,14 +2,14 @@ package com.example.userLogin.controller;
 
 import com.example.userLogin.module.Account;
 import com.example.userLogin.repository.AccountRepository;
-import com.example.userLogin.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import com.example.userLogin.service.AccountService;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/account") // Updated base URL
+@RequestMapping("/api")
 public class AccountController {
 
     @Autowired
@@ -18,38 +18,41 @@ public class AccountController {
     @Autowired
     AccountService accountService;
 
-    // ... Other methods ...
-
-    @PostMapping("/post")
-    Account postAccount(@RequestBody Account newAccount) {
-        accountRepository.save(newAccount);
-        return newAccount;
+    @GetMapping("/account/all")
+    List<Account> getAllAccounts() {
+        return accountRepository.findAll();
     }
 
-    @GetMapping("/{id}")
-    Account getAccount(@PathVariable String id) {
-        return accountService.getAccountDetailsById(id);
+    @GetMapping("/account/{id}")
+    Account getAccountById(@PathVariable String id) {
+        return accountRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Account not found for id: " + id));
     }
 
-    @PutMapping("/updateUsername/{id}")
-    Account updateUsername(@RequestBody Account updatedAccount, @PathVariable String id) {
-        Account oldUser = accountService.getAccountDetailsById(id);
-        oldUser.setUsername(updatedAccount.getUsername());
-        accountRepository.save(oldUser);
-        return oldUser;
+    @PostMapping("/account")
+    Account createAccount(@RequestBody Account newAccount) {
+        return accountRepository.save(newAccount);
     }
 
-    @PutMapping("/updatePassword/{id}")
-    Account updatePassword(@RequestBody Account updatedPassword, @PathVariable String id) {
-        Account oldPassword = accountService.getAccountDetailsById(id);
-        oldPassword.setPassword(updatedPassword.getPassword());
-        accountRepository.save(oldPassword);
-        return oldPassword;
+    @PutMapping("/account/{id}")
+    Account updateAccount(@PathVariable String id, @RequestBody Account updatedAccount) {
+        Account existingAccount = accountRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Account not found for id: " + id));
+        existingAccount.setUsername(updatedAccount.getUsername());
+        existingAccount.setPassword(updatedAccount.getPassword());
+        return accountRepository.save(existingAccount);
     }
 
-    @DeleteMapping("/deleteAccount/{id}")
+    @DeleteMapping("/account/{id}")
     String deleteAccount(@PathVariable String id) {
         accountRepository.deleteById(id);
         return "Deleted Account with id:" + id;
     }
+
+    @GetMapping("/users/login")
+    Boolean userLogin(@RequestParam String username, @RequestParam String password) {
+        boolean isValid = accountService.isUserValid(username, password);
+        return isValid;
+    }
 }
+
