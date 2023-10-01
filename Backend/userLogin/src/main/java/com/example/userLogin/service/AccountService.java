@@ -4,7 +4,6 @@ import com.example.userLogin.module.Account;
 import com.example.userLogin.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.Optional;
 
@@ -12,16 +11,21 @@ import java.util.Optional;
 public class AccountService {
 
     @Autowired
-    AccountRepository accountRepo;
+    AccountRepository accountRepository;
 
-    public Account getAccountDetailsById(Long id) {
-        Optional<Account> accountOptional = accountRepo.findById(id);
+    public Account getAccountDetailsById(String id) {
+        Optional<Account> accountOptional = accountRepository.findById(id);
 
         if (accountOptional.isPresent()) {
-            return accountOptional.get(); // Extract the Account from Optional
+            return accountOptional.get();
         } else {
-            // Handle the case when the account is not found, e.g., by throwing an exception or returning null.
             throw new RuntimeException("Account not found for id: " + id);
         }
+    }
+
+    public boolean isUserValid(String username, String password) {
+        Account user = accountRepository.findByUsername(username);
+
+        return user != null && user.getPassword().equals(password);
     }
 }
